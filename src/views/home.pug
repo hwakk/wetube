@@ -1,0 +1,9 @@
+extends base
+include mixins/video
+
+block content
+  each video in videos
+    +video(video)
+    //- 여기서의 video는 mixin에 정의된 video 호출
+  else
+    li Sorry nothing found.
